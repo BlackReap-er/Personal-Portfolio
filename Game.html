@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap" rel="stylesheet"/>
+    <meta charset="utf-8">
+    <title>Guess the Number Game</title>
+  
+    <style>
+    html {
+        
+        font-family: 'Assistant', sans-serif;
+    }
+      
+    body 
+    {
+    background-image: url("https://img.freepik.com/free-photo/close-up-question-mark-dark-theme-interrogative-topics_183270-417.jpg?size=626&ext=jpg");
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+    }
+    </style>
+
+    <!-- Cookie -->
+    <script>
+    function sck(cname, cvalue, exdays)     //Validity period
+    {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function gck(cname)    //Getting the Name from user
+ {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function cck()    //Checking Cookie
+ {
+  let u = gck("username");
+  if (u != "") {
+    alert("Welcome back, "+u);
+  } else {
+    u= prompt("Please enter your name:", "");
+    if (u!= "" && u!= null) {
+      sck("username",u,365);
+    }
+  }
+}
+    </script>
+</head>
+  
+<body onload="cck()">
+    
+<h1><b><strong>BEAT IT!</strong></b></h1>
+  
+<p><b>You are to enter the answer based on the multiplication question given.
+   <br>Good Luck!</b></p><br>
+  
+   <h2 id="question"></h2>
+   <input type="text" name="answer" id="answer" style="width: 250px; height: 40px; font-size: 32px;"><br><br><button onclick="fire()">Enter</button>
+   <script>
+    var c=0,u=0;
+    var a= Math.floor(Math.random() * 20 + 1);
+    var b= Math.floor(Math.random() * 20 + 1);
+    document.getElementById('question').innerHTML =a+" "+"*"+" "+b;
+var ans = a * b;
+function fire() {
+var user = document.getElementById('answer').value;
+if (user==ans) {
+alert("Your answer is correct :D");
+} else {
+alert("Sorry, your answer is wrong :(")
+}
+}
+</script>
+</body>
+</html>

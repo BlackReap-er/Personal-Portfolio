@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.bgimg 
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url(https://i.pinimg.com/originals/74/43/a3/7443a31b6a19e5630b94a6538ff9bdd1.gif);
+    min-height: 90%;
+}
+body, html 
+{height: 100%}
+*{font-family: 'Amatic SC', cursive;}
+.icon
+{
+    text-align: right;
+    font-size: 33px;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  .fa-github {
+    color: rgb(10, 10, 10);
+  }
+
+  .fa-twitter {
+    color: rgb(10, 10, 10);
+  }
+  .fa-instagram {
+    color: rgb(7, 6, 6);
+  }
+.menu {display: none}
+footer 
+{
+    text-align: center;
+    height: 53px;
+    width:100%;
+    margin: 0px;
+    padding:1px;
+    font-size: 20px;
+    background-color: rgb(0, 1, 2);
+    color: rgb(74, 81, 90);
+    position: relative;
+}
+
+.navbar{
+    float: none;
+    z-index :100;
+    position: fixed;
+    top: 0;
+    padding-top : 15px;
+    padding-bottom: 15px;
+    background-color: #1b5538;
+    margin:0px;
+    left:0;
+  }
+   .row.content {height: 450px}
+   
+
+  @media screen and (max-width: 767px) 
+    {
+      .row.content {height:auto;} 
+    }
+    body {
+        min-height: 85rem;
+        margin: 0px;
+        padding:0;
+      }
